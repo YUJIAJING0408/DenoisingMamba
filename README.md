@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 ## Dataset
 
-![image](https://github.com/YUJIAJING0408/DenoisingMamba/tree/master/images/dataset.jpg)
+![dataset](https://github.com/YUJIAJING0408/DenoisingMamba/blob/master/images/dataset.jpg?raw=true)
 
 The KJL dataset is provided by ACFM and AFGSA, which contains a total of 1109 [Tungsten](https://github.com/tunabrain/tungsten) shots with the noisy images rendered at 32spp and the gt images rendered at 32768spp.These file can be found from [BaiduYunPan](https://github.com/tunabrain/tungsten).
 
@@ -18,11 +18,11 @@ The YBC dataset is rendered by us. The YBC dataset provides noise maps of 1, 2, 
 
 ## Model
 
-![image](https://github.com/YUJIAJING0408/DenoisingMamba/tree/master/images/network_1.jpg)
+![network_1](https://github.com/YUJIAJING0408/DenoisingMamba/blob/master/images/network_1.jpg)
 
 The architecture of Denoising Mamba is shown in the above figure. Firstly, a fast Fourier convolution extractor (FFCE) is used to extract auxiliary features and noise features from the auxiliary buffer and noise image, respectively. To further enhance the capability of long-distance modeling, a residual multi-path architecture Mamba encoder (RMME) is designed, which combines auxiliary features and noise features to input into RMME. The internal architecture of RMME is shown in the following figure, which fully utilizes horizontal and vertical information through a cross four-way scanning scheme.
 
-![image](https://github.com/YUJIAJING0408/DenoisingMamba/tree/master/images/network_2.jpg)
+![network_2](https://github.com/YUJIAJING0408/DenoisingMamba/blob/master/images/network_2.jpg)
 
 
 
@@ -46,8 +46,8 @@ python inferences/dm-ybc.py -td "test_dataset" -is 120 -o "output_path" -m "mode
 
 # Result
 
-![image](https://github.com/YUJIAJING0408/DenoisingMamba/tree/master/images/models.png)
+![models.png](https://github.com/YUJIAJING0408/DenoisingMamba/blob/master/images/models.png)
 
 Inference Cost
 
-![image](https://github.com/YUJIAJING0408/DenoisingMamba/tree/master/images/mem-time.png)
+![mem-time.png](https://github.com/YUJIAJING0408/DenoisingMamba/blob/master/images/mem-time.png?raw=true)
