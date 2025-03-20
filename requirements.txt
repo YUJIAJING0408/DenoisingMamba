@@ -1,0 +1,16 @@
+einops==0.8.1
+h5py==3.11.0
+Imath==0.0.2
+lightning==2.1.1
+mamba_ssm==1.1.1
+matplotlib==3.8.2
+natsort==8.4.0
+numpy==2.2.4
+opencv_python==4.9.0.80
+OpenEXR==3.3.2
+pandas==2.2.3
+skimage==0.0
+timm==0.4.12
+torch==2.1.1
+torchvision==0.16.1
+triton==2.1.0
