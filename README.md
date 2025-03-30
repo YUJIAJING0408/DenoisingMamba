@@ -2,10 +2,22 @@
 
 ****
 
-## Dependencies (other versions may also work)
+ <center>Jiajing Yu, Rui Zhu,Tongzhou Zhao </center>
+
+## Dependencies
 
 ```shell
 pip install -r requirements.txt
+```
+
+### Envs
+
+```
+python==3.10.3
+torch==2.1.1
+lightning==2.1.1
+cuda==2.1
+tensorboard>= 2.18.0
 ```
 
 ## Dataset
@@ -24,30 +36,45 @@ The architecture of Denoising Mamba is shown in the above figure. Firstly, a fas
 
 ![network_2](https://github.com/YUJIAJING0408/DenoisingMamba/tree/master/images/network_2.jpg)
 
-
-
 ## Model weights
 
 The base-model have 3 RMME layers with 3,4,5 division-size. We train our base-model for 1500 epochs by 120*120 image. It can be found from [BaiduYunPan](https://github.com/tunabrain/tungsten).
 
-## Train and Inference
-
-##### Train
+### Train
 
 ```shell
 python train.py --img_size 120 --dataset "dataset_path" --data_name "ybc" --epochs 400 --model "DM" --log_path "log_path"
 ```
 
-##### Inference
+### Monitoring
+
+```shell
+tensorboard --logdir "output_dir" --load_fast true
+```
+
+Turn To [TensorBoard]( http://localhost:6006/)
+
+### Inference
 
 ```shell
 python inferences/dm-ybc.py -td "test_dataset" -is 120 -o "output_path" -m "model_path" -d cuda
 ```
 
-# Result
+## Result
 
 ![models.png](https://github.com/YUJIAJING0408/DenoisingMamba/tree/master/images/models.png)
 
 Inference Cost
 
 ![mem-time.png](https://github.com/YUJIAJING0408/DenoisingMamba/tree/master/images/mem-time.png)
+
+## Citation
+
+```
+@proceedings{denoising_mamba,
+  author = {Rui,Zhu and Jiajing, Yu and Tongzhou, Zhao},
+  title = {Efficient Monte Carlo Denoising via State Space Model with Low GPU Memory Overhead},
+  journal = {The Visual Compute},
+  year = {2025}
+}
+```

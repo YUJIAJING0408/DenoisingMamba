@@ -93,7 +93,7 @@ def builds(args):
             batch_size=args.batch,
             spp=SPP_8,
             num_workers=20,
-            sample_size=(128,128),
+            sample_size=(args.img_size,args.img_size),
             need_reinhard = True,
             need_dispose_normal=True,
             pin_memory=True,
@@ -151,8 +151,8 @@ if __name__ == '__main__':
     args = parse_args()
     # args.model_path = r''
     args.epochs = 1500
-    args.model = "{}-{}".format("DEMC","v3")
-    # args.model_path = '/media/yujiajing0408/Data/MD_logs/AFGM-v3-ybc/[2025-02-4:3]-|epoch=1000|-|lr=0.002|-|loss_rate=0.65:0.35|_32SPP|PSNR-01:29:11/checkpoints/last.ckpt'
+    args.model = "{}-{}".format("DM","v1")
+    args.model_path = '/media/yujiajing0408/Data/Uploads/Weights/DenoisingMamba/4SPP/Step1/checkpoints/last.ckpt'
     args.data_name = "ybc"
     args.data_type = "npz"
     # args.mix_rules = {
@@ -166,7 +166,7 @@ if __name__ == '__main__':
     args.lr = 2.3e-3
     # args.lr = 1e-4
     args.lrMilestone = 30
-    args.batch = 64
+    args.batch = 1
     args.img_size = 120
     # args.debug = True
     # 训练
