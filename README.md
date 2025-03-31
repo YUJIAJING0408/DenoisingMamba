@@ -2,7 +2,11 @@
 
 ****
 
- <center>Jiajing Yu, Rui Zhu,Tongzhou Zhao </center>
+<center>Jiajing Yu, Rui Zhu,Tongzhou Zhao </center>
+
+## Abstract
+
+Monte Carlo (MC) denoising plays a pivotal role in enhancing image quality in physically-based rendering. Despite the widespread adoption of learning-based methods, achieving high denoising accuracy while minimizing GPU memory usage remains a formidable challenge. In this paper, we introduce Denoising Mamba, a novel approach that leverages a memory-efficient state space model (SSM) architecture, circumventing the limitations of attention-based methods. Our framework incorporates an optimized Fast Fourier Feature extractor for seamless local-global feature fusion and a Residual Multiway Mamba Encoder (RMME) that captures long-range spatial dependencies through linear-complexity bidirectional scanning. This culminates in a lightweight decoder for reconstructing high-resolution, denoised images. Experimental results on real datasets demonstrate a notable reduction in $RMSE^{-3}$ (by 2.554), an increase in $PSNR$ (by 2.04 dB), and an improvement in $SSIM^{-2}$ (by 5.04), while requiring only 15% of the GPU memory and 40% of the inference time compared to state-of-the-art attention-based methods. Our code and datasets are publicly available at [[GitHub - YUJIAJING0408/DenoisingMamba: Denoising Mamba](https://github.com/YUJIAJING0408/DenoisingMamba)].
 
 ## Dependencies
 
@@ -24,9 +28,9 @@ tensorboard>= 2.18.0
 
 ![dataset](https://github.com/YUJIAJING0408/DenoisingMamba/blob/master/images/dataset.jpg)
 
-The KJL dataset is provided by ACFM and AFGSA, which contains a total of 1109 [Tungsten](https://github.com/tunabrain/tungsten) shots with the noisy images rendered at 32spp and the gt images rendered at 32768spp.These file can be found from [BaiduYunPan](https://github.com/tunabrain/tungsten).
+The KJL dataset is provided by [ACFM](https://github.com/mcdenoising/AdvMCDenoise) and [AFGSA](https://github.com/Aatr0x13/MC-Denoising-via-Auxiliary-Feature-Guided-Self-Attention), which contains a total of 1109 [Tungsten](https://github.com/tunabrain/tungsten) shots with the noisy images rendered at 32spp and the gt images rendered at 32768spp.These file can be found from [BaiduYunPan](https://pan.baidu.com/s/1Jyck8eOcdc7aI-P3gvEnBw?pwd=YBCD).
 
-The YBC dataset is rendered by us. The YBC dataset provides noise maps of 1, 2, 4, 8, 16, 32, 64, 128 SPP, as well as clear maps of 16K and corresponding depth normal reflections. We will upload the dataset to Baidu Netdisk soon
+The YBC dataset is rendered by us. The YBC dataset provides noise maps of 1, 2, 4, 8, 16, 32, 64, 128 SPP, as well as clear maps of 16K and corresponding depth normal reflections. [BaiduYunPan](https://pan.baidu.com/s/1Jyck8eOcdc7aI-P3gvEnBw?pwd=YBCD).
 
 ## Model
 
