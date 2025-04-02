@@ -28,9 +28,9 @@ tensorboard>= 2.18.0
 
 ![dataset](https://github.com/YUJIAJING0408/DenoisingMamba/blob/master/images/dataset.jpg)
 
-The KJL dataset is provided by [ACFM](https://github.com/mcdenoising/AdvMCDenoise) and [AFGSA](https://github.com/Aatr0x13/MC-Denoising-via-Auxiliary-Feature-Guided-Self-Attention), which contains a total of 1109 [Tungsten](https://github.com/tunabrain/tungsten) shots with the noisy images rendered at 32spp and the gt images rendered at 32768spp.These file can be found from [BaiduYunPan](https://pan.baidu.com/s/1Jyck8eOcdc7aI-P3gvEnBw?pwd=YBCD).
+The KJL dataset is provided by [ACFM](https://github.com/mcdenoising/AdvMCDenoise) and [AFGSA](https://github.com/Aatr0x13/MC-Denoising-via-Auxiliary-Feature-Guided-Self-Attention), which contains a total of 1109 [Tungsten](https://github.com/tunabrain/tungsten) shots with the noisy images rendered at 32spp and the gt images rendered at 32768spp.These file can be found from [GoogleDrive](https://drive.google.com/file/d/1aWCbbUqkdxvNl_VZvzomaPKFsvEfAdOw/view).
 
-The YBC dataset is rendered by us. The YBC dataset provides noise maps of 1, 2, 4, 8, 16, 32, 64, 128 SPP, as well as clear maps of 16K and corresponding depth normal reflections. [GoogleDrive](https://drive.google.com/file/d/1aWCbbUqkdxvNl_VZvzomaPKFsvEfAdOw/view).
+The YBC dataset is rendered by us. The YBC dataset provides noise maps of 1, 2, 4, 8, 16, 32, 64, 128 SPP, as well as clear maps of 16K and corresponding depth normal reflections. These file can be found from [BaiduYunPan](https://pan.baidu.com/s/1Jyck8eOcdc7aI-P3gvEnBw?pwd=YBCD).
 
 ## Model
 
