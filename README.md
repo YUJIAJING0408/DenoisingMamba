@@ -42,7 +42,7 @@ The architecture of Denoising Mamba is shown in the above figure. Firstly, a fas
 
 ## Model weights
 
-The base-model have 3 RMME layers with 3,4,5 division-size. We train our base-model for 1500 epochs by 120*120 image on YBC. It can be found from [BaiduYunPan](https://github.com/tunabrain/tungsten).
+The base-model have 3 RMME layers with 3,4,5 division-size. We train our base-model for 1500 epochs by 120*120 image on YBC. It can be found from [BaiduYunPan](https://pan.baidu.com/s/1x-jQW831wjIk-69QsOZH7w?pwd=6tvu).
 
 ### Train
 
