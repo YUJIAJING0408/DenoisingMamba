@@ -25,7 +25,7 @@ def calculate_psnr_255(img1, img2):
     if img1.ndim == 4:
         temp = 0
         for i in range(len(img1)):
-            temp += calculate_psnr(img1[i], img2[i])
+            temp += calculate_psnr_255(img1[i], img2[i])
         return temp
 
     # img1 and img2 have range [0, 255]
@@ -92,7 +92,7 @@ def calculate_ssim_255(img1, img2):
     if img1.ndim == 4:
         temp = 0
         for i in range(len(img1)):
-            temp += calculate_ssim(img1[i], img2[i])
+            temp += calculate_ssim_255(img1[i], img2[i])
         return temp
 
     if img1.ndim == 2:
